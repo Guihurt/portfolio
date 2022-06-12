@@ -17,8 +17,11 @@ export default function Navigation({ children }) {
           <Link href="/about">
             <a>About Me</a>
           </Link>
-          <Link href="/wiki/dashboard">
+          <Link href="/wiki/">
             <a>Wiki</a>
+          </Link>
+          <Link href="/grailguides/">
+            <a>Grail Guides</a>
           </Link>
         </div>
       </div>

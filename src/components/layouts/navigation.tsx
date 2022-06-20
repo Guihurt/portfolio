@@ -1,8 +1,8 @@
 import Link from 'next/link'
 import styles from '../../styles/Navigation.module.css'
-import React, {FC} from 'react'
+import React, { FC } from 'react'
 
-const Navigation : FC<{children: React.ReactNode}> = ({children}) => {
+const Navigation: FC<{ children: React.ReactNode }> = ({ children }) => {
   return (
     <div className='bg-pink-300 p-1'>
       <div className='flex flex-col justify-center items-center bg-gray-300'>
@@ -15,12 +15,17 @@ const Navigation : FC<{children: React.ReactNode}> = ({children}) => {
           <Link href="/about">
             <a>About Me</a>
           </Link>
-          <Link href="/wiki/">
-            <a>Wiki</a>
-          </Link>
-          <Link href="/grailguides/">
-            <a>Grail Guides</a>
-          </Link>
+          {process.env.NODE_ENV === 'development' ?
+            <>
+              <Link href="/wiki/">
+                <a>Wiki</a>
+              </Link>
+              <Link href="/grailguides/">
+                <a>Grail Guides</a>
+              </Link>
+            </>
+            : null
+          }
         </div>
       </div>
 

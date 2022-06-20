@@ -1,6 +1,5 @@
 import type { NextPage } from 'next'
 import Image from 'next/image';
-import styles from '../styles/Home.module.css'
 import profilePic from '../public/images/profile.png'
 
 const Home: NextPage = () => {
@@ -17,7 +16,7 @@ const Home: NextPage = () => {
        </div>
      </div>
 
-      <footer className={styles.footer}>
+      <footer>
         
       </footer>
     </>
